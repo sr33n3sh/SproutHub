@@ -10,8 +10,7 @@ def signup(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             user =form.save()
-            auth_login(request, user)
-            return redirect('home')
+            return redirect('http://127.0.0.1:8000/clghome/')
     else:
         form = SignUpForm()
     return render(request, 'signup.html',{'form':form})
@@ -20,8 +19,7 @@ def college_register(request):
         form=college_Regform(request.POST)
         if form.is_valid():
             user=form.save()
-            auth_login(request,user)
-            return redirect('home')
+            return redirect('http://127.0.0.1:8000/clghome/')
     else:
         form=college_Regform()
     return render(request,'csignup.html',{'form':form})
@@ -31,3 +29,6 @@ def uploadProject(request):
     form = project()
     if request.method == 'POST':
         form= project(request.POST)
+
+def redi(request):
+    return redirect('http://127.0.0.1:8000/clghome/')
