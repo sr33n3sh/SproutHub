@@ -30,3 +30,5 @@ class college_Regform(UserCreationForm):
         if commit:
             user.save()
         return user
+    
+

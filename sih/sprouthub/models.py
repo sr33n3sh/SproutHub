@@ -55,3 +55,8 @@ class Projects(models.Model):
 
     def __str__(self):
         return str(self.project_id) + " ___ " + self.project_title 
+
+
+
+
+
