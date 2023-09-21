@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.contrib.auth import login as auth_login
 from django.shortcuts import render, redirect
 from accounts.forms import *
-from sprouthub.forms import college_Regform
 # Create your views here.
 def signup(request):
     if request.method == 'POST':
