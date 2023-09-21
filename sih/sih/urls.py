@@ -28,5 +28,6 @@ urlpatterns = [
     path('login/',views.loginpage,name='login'),
     path('student_register/',acc_views.signup),
     path('college_register/',acc_views.college_register),
-    path('register/',views.register)
+    path('register/',views.register),
+    path('clghome/',views.clghome)
 ]

@@ -87,3 +87,6 @@ def register(request):
 
 def landingPage(request):
     return render(request,"landingPage.html",{"title":"LandingPage"})
+
+def clghome(request):
+    return render(request,"clg_home.html")
