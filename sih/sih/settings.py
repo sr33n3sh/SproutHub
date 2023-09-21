@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'sprouthub',
     'accounts',
     'widget_tweaks',
+    
 ]
 
 MIDDLEWARE = [

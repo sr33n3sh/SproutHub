@@ -12,7 +12,6 @@
     <style>
         body{
             background-color: black;
-            margin-top:150px;
         }
         .color1{
             background-color: #3f0071;
@@ -37,7 +36,10 @@
 </head>
 <body>
     {% block logo %}
-    <img src="weblogo.png">
+    <div class="logo d-flex justify-content-center align-items-center">
+        <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 6rem; margin: 1rem;">
+    </div>
+    
     {% endblock %}
     {% block content %}
     {% endblock %}
