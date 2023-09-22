@@ -88,5 +88,30 @@ def register(request):
 def landingPage(request):
     return render(request,"landingPage.html",{"title":"LandingPage"})
 
-def clghome(request):
-    return render(request,"clg_home.html")
+
+
+from .models import Project 
+def project_form(request):
+    if request.method == 'POST':
+        print("Posted")
+        project_name = request.POST['project_name']
+        description = request.POST['description']
+        student_name = request.POST['student_name']
+        student_email=request.POST['student_email']
+        student_roll = request.POST['student_roll']
+        project_file = request.FILES['project_file']
+        project = Project(
+            project_name=project_name,
+            project_description=description,
+            student_name=student_name,
+            student_email=student_email,
+            student_roll=student_roll,
+            project_file=project_file
+        )
+        project.save()
+        return redirect('project_list')
+    return render(request, 'clg_home.html')
+
+def project_list(request):
+    projects = Project.objects.all()
+    return render(request, 'clg_home.html', {'projects': projects})

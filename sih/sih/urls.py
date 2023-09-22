@@ -28,7 +28,9 @@ urlpatterns = [
     path('student_register/',acc_views.signup),
     path('college_register/',acc_views.college_register),
     path('register/',views.register),
-    path('clghome/',views.clghome),
     path('login/',auth_views.LoginView.as_view(template_name='login.html'),name='login'),
-    path('accounts/profile/',acc_views.redi)
+    path('accounts/profile/',acc_views.redi),
+    path('list/',views.project_form, name='project_form'),
+    path('clghome/', views.project_list, name='project_list'),
+
 ]

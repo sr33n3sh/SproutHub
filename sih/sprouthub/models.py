@@ -60,3 +60,28 @@ class Projects(models.Model):
 
 
 
+# class CreateProject(models.Model):
+#     project_id = models.AutoField(primary_key=True)  
+#     project_name = models.CharField(max_length=200)
+#     project_description = models.TextField()
+#     student_name = models.CharField(max_length=100)
+#     student_email=models.EmailField()
+#     student_roll = models.CharField(max_length=10)
+#     project_file = models.FileField(upload_to='uploads/')
+#     created_at = models.DateTimeField(auto_now_add=True)
+
+#     def __str__(self):
+#         return self.project_name
+
+class Project(models.Model):
+    project_id = models.AutoField(primary_key=True)  
+    project_name = models.CharField(max_length=200)
+    project_description = models.TextField()
+    student_name = models.CharField(max_length=100)
+    student_email=models.EmailField(default='example@email.com')
+    student_roll = models.CharField(max_length=10)
+    project_file = models.FileField(upload_to='uploads/')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.project_name
