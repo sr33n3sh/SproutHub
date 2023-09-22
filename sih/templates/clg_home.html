@@ -139,19 +139,17 @@
     <section class="uprojsection">
         <div class="p-3 fs-1 lh-1 text-center  fw-semibold text-white">PROJECTS</div>
         <div class="uprojects d-flex flex-column justify-content-center align-content-center m-auto w-75 ">
+
+            {% for project in projects %}
             <div class="uproj card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title fs-3">Suit Making Technology</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                        dignissimos quos
-                        iure itaque. Dolor porro laudantium commodi, ipsa voluptas incidunt totam numquam libero
-                        corrupti nemo aperiam reiciendis molestiae sapiente eum. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Ratione alias perferendis reprehenderit quos ex velit
-                        molestiae hic tempora laborum impedit, enim vero magnam eos molestias praesentium
-                        provident, tenetur cupiditate recusandae!</p>
+                    <h5 class="card-title fs-3">{{ project.project_name }}</h5>
+                    <p class="card-text">{{ project.project_description}}</p>
                     <div class="authordetails d-flex">
                         <p class="authorhead fw-bold">Project Author :</p>
-                        <p class="authorname mx-1"> Iron Man</p>
+                        <p class="authorname mx-1">{{ project.student_name }}</p>
+                        <p class="authorname mx-1">{{ project.created_at }}</p>
+                        <a href="{{ project.project_file.url }}" target="_blank">{{ project.project_file.name }}</a>
                         <a class="authorlink link mx-1" style="text-decoration: underline;">Details</a>
                     </div>
                     <div class="projrating d-flex align-items-center">
@@ -165,142 +163,44 @@
                         </div>
                     </div>
                 </div>
+                
+
             </div>
+            {% empty %}
             <div class="uproj card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title fs-3">Suit Making Technology</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                        dignissimos quos
-                        iure itaque. Dolor porro laudantium commodi, ipsa voluptas incidunt totam numquam libero
-                        corrupti nemo aperiam reiciendis molestiae sapiente eum. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Ratione alias perferendis reprehenderit quos ex velit
-                        molestiae hic tempora laborum impedit, enim vero magnam eos molestias praesentium
-                        provident, tenetur cupiditate recusandae!</p>
-                    <div class="authordetails d-flex">
-                        <p class="authorhead fw-bold">Project Author :</p>
-                        <p class="authorname mx-1"> Iron Man</p>
-                        <a class="authorlink link mx-1" style="text-decoration: underline;">Details</a>
-                    </div>
-                    <div class="projrating d-flex align-items-center">
-                        <b>Rating:</b>
-                        <div class="rating mx-2">
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
+                    <h5 class="card-title fs-3">No projects Available</h5>
                 </div>
             </div>
-            <div class="uproj card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-3">Suit Making Technology</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                        dignissimos quos
-                        iure itaque. Dolor porro laudantium commodi, ipsa voluptas incidunt totam numquam libero
-                        corrupti nemo aperiam reiciendis molestiae sapiente eum. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Ratione alias perferendis reprehenderit quos ex velit
-                        molestiae hic tempora laborum impedit, enim vero magnam eos molestias praesentium
-                        provident, tenetur cupiditate recusandae!</p>
-                    <div class="authordetails d-flex">
-                        <p class="authorhead fw-bold">Project Author :</p>
-                        <p class="authorname mx-1"> Iron Man</p>
-                        <a class="authorlink link mx-1" style="text-decoration: underline;">Details</a>
-                    </div>
-                    <div class="projrating d-flex align-items-center">
-                        <b>Rating:</b>
-                        <div class="rating mx-2">
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uproj card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-3">Suit Making Technology</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                        dignissimos quos
-                        iure itaque. Dolor porro laudantium commodi, ipsa voluptas incidunt totam numquam libero
-                        corrupti nemo aperiam reiciendis molestiae sapiente eum. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Ratione alias perferendis reprehenderit quos ex velit
-                        molestiae hic tempora laborum impedit, enim vero magnam eos molestias praesentium
-                        provident, tenetur cupiditate recusandae!</p>
-                    <div class="authordetails d-flex">
-                        <p class="authorhead fw-bold">Project Author :</p>
-                        <p class="authorname mx-1"> Iron Man</p>
-                        <a class="authorlink link mx-1" style="text-decoration: underline;">Details</a>
-                    </div>
-                    <div class="projrating d-flex align-items-center">
-                        <b>Rating:</b>
-                        <div class="rating mx-2">
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uproj card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title fs-3">Suit Making Technology</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-                        dignissimos quos
-                        iure itaque. Dolor porro laudantium commodi, ipsa voluptas incidunt totam numquam libero
-                        corrupti nemo aperiam reiciendis molestiae sapiente eum. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Ratione alias perferendis reprehenderit quos ex velit
-                        molestiae hic tempora laborum impedit, enim vero magnam eos molestias praesentium
-                        provident, tenetur cupiditate recusandae!</p>
-                    <div class="authordetails d-flex">
-                        <p class="authorhead fw-bold">Project Author :</p>
-                        <p class="authorname mx-1"> Iron Man</p>
-                        <a class="authorlink link mx-1" style="text-decoration: underline;">Details</a>
-                    </div>
-                    <div class="projrating d-flex align-items-center">
-                        <b>Rating:</b>
-                        <div class="rating mx-2">
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            {% endfor %}
+            
     </section>
     <section class="uploadproj">
         <div class="newproj-container w-75 m-auto py-5">
             <h1 class="text-center">Create New Project</h1>
-            <form class="row">
+            <form class="row" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="col-12 mb-4">
-                    <label for="newprojname" class="form-label fs-5">Project Title</label>
-                    <input type="text" class="form-control" id="newprojname">
+                    <label for="project_name" class="form-label fs-5">Project Title</label>
+                    <input type="text" class="form-control" id="project_name" name="project_name">
                 </div>
                 <div class="col-12 mb-4">
-                    <label for="desc" class="form-label fs-5">Project Description</label>
-                    <textarea class="form-control" placeholder="Write the description here" id="desc"
+                    <label for="description" class="form-label fs-5">Project Description</label>
+                    <textarea class="form-control" placeholder="Write the description here" id="description" name="description"
                         style="height: 100px"></textarea>
                 </div>
                 <h3>Student Information</h3>
                 <div class="col-6">
-                    <label for="stuname" class="form-label fs-5">Student Name</label>
-                    <input type="text" class="form-control" id="stuname">
+                    <label for="student_name" class="form-label fs-5">Student Name</label>
+                    <input type="text" class="form-control" id="student_name" name="student_name">
                 </div>
                 <div class="col-md-6">
-                    <label for="Email" class="form-label fs-5">Email</label>
-                    <input type="email" class="form-control" id="Email">
+                    <label for="student_email" class="form-label fs-5">Student Email</label>
+                    <input type="email" class="form-control" id="student_email" name="student_email">
                 </div>
                 <div class="col-md-12">
-                    <label for="stuid" class="form-label fs-5">Student Id</label>
-                    <input type="number" class="form-control" id="stuid">
+                    <label for="student_roll" class="form-label fs-5">Student Id</label>
+                    <input type="number" class="form-control" id="student_roll" name="student_roll">
                 </div>
                 <div class="filecontainer d-flex flex-column">
                     <div
@@ -312,15 +212,15 @@
                         </h2>
                         <p>
                             Or
-                            <label for="file-input" class="file-label" style="text-decoration: underline; font-weight: 600 ;
+                            <label for="project_file" class="file-label" style="text-decoration: underline; font-weight: 600 ;
                             color: #1D4ED8; ">
                                 choose your files
-                                <input type="file" id="file-input" style="display: none;">
+                                <input type="file" id="project_file" name="project_file" accept=".pdf" required style="display: none;">
                             </label>
                         </p>
                     </div>
                 </div>
-                <button type="button" class="btn btn-outline-success w-25 m-auto">Submit</button>
+                <input type="submit" class="btn btn-outline-success w-25 m-auto">
             </form>
         </div>
 
