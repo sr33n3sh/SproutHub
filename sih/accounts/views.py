@@ -19,7 +19,7 @@ def college_register(request):
         form=college_Regform(request.POST)
         if form.is_valid():
             user=form.save()
-            return redirect('http://127.0.0.1:8000/clghome/')
+            return redirect('http://127.0.0.1:8000/login/')
     else:
         form=college_Regform()
     return render(request,'csignup.html',{'form':form})
