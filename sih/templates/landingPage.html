@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 {% load static %}
 <!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-dark color5">
+<nav class="navbar navbar-expand-lg navbar-dark color5" style="position:sticky; top:0;">
   <div class="logo-container d-flex flex-column justify-content-center align-items-center
   ">
     <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 2.5rem;
@@ -11,38 +11,39 @@
   <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="{ % url 'home' %}">Home </a>
+        <a class="nav-link text-white" href="{% url 'home' %}">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{ % url 'about_page' %}">About</a>
+        <a class="nav-link text-white" href="{% url 'about_page' %}">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link text-white" href="#">Contact</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0 d-flex mb-2">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="http://127.0.0.1:8000/search/">Search </a>
+          <a class="nav-link text-white" href="http://127.0.0.1:8000/search/">Search </a>
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             {{ user.username }}
           </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:8000/logout">logout</a>
-          </li>
-          {% else %}
+        </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://127.0.0.1:8000/login/">Sign In</a>
+          <a class="nav-link" href="http://127.0.0.1:8000/logout">logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link text-white" href="http://127.0.0.1:8000/login/">Sign In</a>
         </li>
       </ul>
 
       <button class="btn btn-success my-2 my-sm-0 mx-3" type="submit">
-        <a class="nav-link" href="http://127.0.0.1:8000/college_register/">Sign Up</a>
-  
+        <a class="nav-link text-white" href="http://127.0.0.1:8000/college_register/">Sign Up</a>
+
         {% endif %}
     </form>
   </div>
@@ -51,7 +52,7 @@
 <!-- end of nav bar-->
 
 
-  <div class="container d-flex justify-content-center align-items-center my-5 ">
+<div class="container d-flex justify-content-center align-items-center my-5 ">
   <div class=" text-white text-center" style="width:1500px; font-size:50px;">
 
     <p>Welcome to <strong>SPROUT HUB</strong></p>
@@ -71,13 +72,16 @@
     })
   </script>
 </div>
-</div><div class="pt-5" >
+
+
+</div>
+<div class="pt-5">
   <h2 class="text-light text-center">Product Features</h2>
   <div class=" container text-light ">
     <div class="row">
       <div class="col-5 d-flex align-items-center">
         <div>
-          <h5>View projects made by students of different institutions</h5>
+          <h5>View projects created by students from various institutions</h5>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima,
             necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum
             necessitatibus blanditiis esse tenetur?</p>
@@ -143,91 +147,93 @@
 
 
 
-<!--slider -->
-<div id="carouselExampleIndicators" class="carousel slide" style="padding: 100px 0; ">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-      aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-      aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-      aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-      aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-      aria-label="Slide 5"></button>
-  </div>
-  <div class="carousel-inner ">
-    <div class="carousel-item active ">
-      <div class="card color5 text-light " style="width: 50%; margin: auto;">
-        <h5 class="card-header fs-2">Project title</h5>
-        <div class="card-body">
-          <h5 class="card-title">Institute Name</h5>
-          <p class="card-text">description Lorem ipsum dolor sit amet.</p>
-          <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
-            View Project
-          </button>
+  <!--slider -->
+  <div id="carouselExampleIndicators" class="carousel slide" style="padding: 100px 0; ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner ">
+      <div class="carousel-item active ">
+        <div class="card color5 text-light " style="width: 50%; margin: auto;">
+          <h5 class="card-header fs-2">Project title</h5>
+          <div class="card-body">
+            <h5 class="card-title">Institute Name</h5>
+            <p class="card-text">description Lorem ipsum dolor sit amet.</p>
+            <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
+              View Project
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <div class="card color5 text-light " style="width: 50%; margin: auto;">
-        <h5 class="card-header fs-2">Project title</h5>
-        <div class="card-body">
-          <h5 class="card-title">Institute Name</h5>
-          <p class="card-text">description Lorem ipsum dolor sit amet.</p>
-          <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
-            View Project
-          </button>
+      <div class="carousel-item">
+        <div class="card color5 text-light " style="width: 50%; margin: auto;">
+          <h5 class="card-header fs-2">Project title</h5>
+          <div class="card-body">
+            <h5 class="card-title">Institute Name</h5>
+            <p class="card-text">description Lorem ipsum dolor sit amet.</p>
+            <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
+              View Project
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-item  ">
-      <div class="card color5 text-light " style="width: 50%; margin: auto;">
-        <h5 class="card-header fs-2">Project title</h5>
-        <div class="card-body">
-          <h5 class="card-title">Institute Name</h5>
-          <p class="card-text">description Lorem ipsum dolor sit amet.</p>
-          <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
-            View Project
-          </button>
+      <div class="carousel-item  ">
+        <div class="card color5 text-light " style="width: 50%; margin: auto;">
+          <h5 class="card-header fs-2">Project title</h5>
+          <div class="card-body">
+            <h5 class="card-title">Institute Name</h5>
+            <p class="card-text">description Lorem ipsum dolor sit amet.</p>
+            <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
+              View Project
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-item  ">
-      <div class="card color5 text-light " style="width: 50%; margin: auto;">
-        <h5 class="card-header fs-2">Project title</h5>
-        <div class="card-body">
-          <h5 class="card-title">Institute Name</h5>
-          <p class="card-text">description Lorem ipsum dolor sit amet.</p>
-          <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
-            View Project
-          </button>
+      <div class="carousel-item  ">
+        <div class="card color5 text-light " style="width: 50%; margin: auto;">
+          <h5 class="card-header fs-2">Project title</h5>
+          <div class="card-body">
+            <h5 class="card-title">Institute Name</h5>
+            <p class="card-text">description Lorem ipsum dolor sit amet.</p>
+            <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
+              View Project
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-item  ">
-      <div class="card color5 text-light " style="width: 50%; margin: auto;">
-        <h5 class="card-header fs-2">Project title</h5>
-        <div class="card-body">
-          <h5 class="card-title">Institute Name</h5>
-          <p class="card-text">description Lorem ipsum dolor sit amet.</p>
-          <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
-            View Project
-          </button>
+      <div class="carousel-item  ">
+        <div class="card color5 text-light " style="width: 50%; margin: auto;">
+          <h5 class="card-header fs-2">Project title</h5>
+          <div class="card-body">
+            <h5 class="card-title">Institute Name</h5>
+            <p class="card-text">description Lorem ipsum dolor sit amet.</p>
+            <button class="btn btn-outline-light my-2 my-sm-0 " type="submit">
+              View Project
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
-{% endblock %}
+  {% endblock %}
