@@ -16,18 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
+
 from sprouthub import views
 from accounts import views as acc_views
 urlpatterns = [
     path('', views.landingPage),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
     path('search/',views.search,name='search'),
-    #path('student_register/',views.student_register,name='student_register'),
-    #path('college_register/',views.college_register,name='college_register'),
-    # path('register/',views.register,name='register'),
-    path('login/',views.loginpage,name='login'),
     path('student_register/',acc_views.signup),
     path('college_register/',acc_views.college_register),
     path('register/',views.register),
-    path('clghome/',views.clghome)
+    path('clghome/',views.clghome),
+    path('login/',auth_views.LoginView.as_view(template_name='login.html'),name='login'),
+    path('accounts/profile/',acc_views.redi)
 ]
