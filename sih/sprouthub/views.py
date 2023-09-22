@@ -88,7 +88,8 @@ def register(request):
 def landingPage(request):
     return render(request,"landingPage.html",{"title":"LandingPage"})
 
-
+def aboutPage(request):
+    return render(request,"aboutPage.html",{"title":"aboutPage"})
 
 from .models import Project 
 def project_form(request):

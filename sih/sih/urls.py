@@ -21,7 +21,7 @@ from django.contrib.auth import views as auth_views
 from sprouthub import views
 from accounts import views as acc_views
 urlpatterns = [
-    path('', views.landingPage),
+    path('', views.landingPage, name='home'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('admin/', admin.site.urls),
     path('search/',views.search,name='search'),
@@ -32,5 +32,5 @@ urlpatterns = [
     path('accounts/profile/',acc_views.redi),
     path('list/',views.project_form, name='project_form'),
     path('clghome/', views.project_list, name='project_list'),
-
+    path('about/',views.aboutPage, name='about_page'),
 ]

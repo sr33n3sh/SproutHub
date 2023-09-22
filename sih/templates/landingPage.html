@@ -11,10 +11,10 @@
   <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="">Home </a>
+        <a class="nav-link" href="{ % url 'home' %}">Home </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="{ % url 'about_page' %}">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contact</a>
@@ -35,13 +35,19 @@
     </form>
   </div>
 </nav>
-<hr>
+
 <!-- end of nav bar-->
 
-<div class="container d-flex justify-content-center align-items-center mb-2">
-  <div class="container text-white">
-    <h1>Welcome to <strong>SPROUT HUB</strong></h1>
-    <h1>you can <span class="auto-type" style="color: #999797;"></span></h1>
+
+  <div class="container d-flex justify-content-center align-items-center my-5 ">
+  <div class=" text-white text-center" style="width:1500px; font-size:50px;">
+
+    <p>Welcome to <strong>SPROUT HUB</strong></p>
+    <div class="d-flex justify-content-start" style="width: 800px;
+    margin-left: 28%;">
+      <p>you can <span class="auto-type" style="color: #999797;"></span></p>
+    </div>
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
@@ -53,10 +59,7 @@
     })
   </script>
 </div>
-
-
-<!-- features -->
-<div class="container">
+</div><div class="pt-5" >
   <h2 class="text-light text-center">Product Features</h2>
   <div class=" container text-light ">
     <div class="row">
@@ -120,7 +123,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 
 

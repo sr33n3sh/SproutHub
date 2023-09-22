@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block content %}
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark color5">
+  <div class="logo-container d-flex flex-column justify-content-center align-items-center
+  ">
+    <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 2.5rem;
+    margin: 0 1rem;" alt="Logo" />
+    <p class="text-white" style="font-weight: lighter; margin: 0;">HUB</p>
+  </div>
+  <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="{ % url 'home' %}">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 d-flex mb-2">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/search/">Search </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/login/">Sign In</a>
+        </li>
+      </ul>
+
+      <button class="btn btn-success my-2 my-sm-0 mx-3" type="submit">
+        <a class="nav-link" href="http://127.0.0.1:8000/register/">Sign Up</a>
+    </form>
+  </div>
+</nav>
+<div class="container my-4">
+  <div style="font-size:xx-large;">About Sprout Hub
+  </div><br>
+  <div>Welcome to Sprout Hub, your gateway to a world of academic innovation!
+  </div><br>
+  <div>In the ever-evolving landscape of education and research, Sprout Hub stands as a beacon of innovation and collaboration. We believe that knowledge knows no boundaries, and our platform is a testament to that belief. Here, students become pioneers, researchers become trailblazers, and ideas take flight.</div><br>
+  <div>At Sprout Hub, we believe in the power of knowledge sharing. Our platform serves as a virtual showcase, where universities from across the globe come together to proudly display the exceptional work of their students. Here, you'll find a diverse collection of projects, spanning a wide range of subjects and disciplines.
+  </div><br>
+  <div>
+    Our mission is simple: to nurture creativity, inspire learning, and foster collaboration. Whether you're an aspiring student seeking inspiration for your next endeavor or an enthusiastic learner eager to explore cutting-edge research, Sprout Hub has something for everyone.
+  </div><br>
+  <div>
+    Every project showcased on Sprout Hub is a testament to the limitless potential of human intellect. It's a space where ideas germinate, evolve, and ultimately flourish into solutions that address the challenges of our time. We invite you to dive into this rich tapestry of intellectual exploration, where every click is a step into uncharted territory.
+  </div><br>
+  <div>
+    Join our community today, and together, let's embrace the beauty of learning, discovery, and intellectual growth. At Sprout Hub, we are more than a platform; we are a global family of knowledge seekers and creators. Together, we cultivate knowledge, one project at a time, and shape a brighter future for all.
+    </div><br>
+    <div>Thank you for being a part of the Sprout Hub family. Together, we cultivate knowledge, one project at a time.
+    </div>
+  
+</div>
+{% endblock %}
