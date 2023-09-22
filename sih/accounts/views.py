@@ -24,11 +24,7 @@ def college_register(request):
         form=college_Regform()
     return render(request,'csignup.html',{'form':form})
 
-def uploadProject(request):
-    name='upload'
-    form = project()
-    if request.method == 'POST':
-        form= project(request.POST)
+
 
 def redi(request):
     return redirect('http://127.0.0.1:8000/clghome/')
