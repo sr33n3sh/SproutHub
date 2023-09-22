@@ -2,12 +2,13 @@
 {% load static %}
 <!-- nav bar -->
 <nav class="navbar navbar-expand-lg navbar-dark color5">
-  <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 2.5rem;
-  margin: 0 1rem;" alt="Logo"/>
-  <div
-    class="collapse navbar-collapse justify-content-between"
-    id="navbarTogglerDemo02"
-  >
+  <div class="logo-container d-flex flex-column justify-content-center align-items-center
+  ">
+    <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 2.5rem;
+    margin: 0 1rem;" alt="Logo" />
+    <p class="text-white" style="font-weight: lighter; margin: 0;">HUB</p>
+  </div>
+  <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link" href="">Home </a>
@@ -28,24 +29,24 @@
           <a class="nav-link" href="http://127.0.0.1:8000/login/">Sign In</a>
         </li>
       </ul>
-      
+
       <button class="btn btn-outline-light my-2 my-sm-0 mx-3" type="submit">
-        <a class="nav-link" href="http://127.0.0.1:8000/register/">signup</a>
+        <a class="nav-link" href="http://127.0.0.1:8000/register/">Sign Up</a>
     </form>
   </div>
 </nav>
 <hr>
 <!-- end of nav bar-->
 
-<div class="container">
+<div class="container d-flex justify-content-center align-items-center mb-2">
   <div class="container text-white">
-    <h1>Welcome to <strong>SIH</strong></h1>
-    <h1>you can <span class="auto-type"></span></h1>
+    <h1>Welcome to <strong>SPROUT HUB</strong></h1>
+    <h1>you can <span class="auto-type" style="color: #999797;"></span></h1>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    var typed= new Typed(".auto-type", {
-      strings: ["VIEW PROJECTS","UPLOAD PROJECTS", "DOWNLOAD PROJECTS","COLLABORATE"],
+    var typed = new Typed(".auto-type", {
+      strings: ["VIEW PROJECTS", "UPLOAD PROJECTS", "DOWNLOAD PROJECTS", "COLLABORATE"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true
@@ -56,53 +57,69 @@
 
 <!-- features -->
 <div class="container">
-<h2 class="text-light text-center">Product Features</h2>
-<div class=" container text-light ">
-  <div class="row">
-    <div class="col-5 d-flex align-items-center">
-      <div>
-        <h5>View projects made by students of different institutions</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima, necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum necessitatibus blanditiis esse tenetur?</p>
-      </div>
-    </div>
-    <div class="col-7 ">
-      <img src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211" style="width: 700px; margin: 50px 0;" >
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-7">
-      <img src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211" style="width: 700px; margin: 50px 0;" >
-    </div>
-    <div class="col-5 d-flex align-items-center">
-      <div>
-        <h5>Download the project and adjust it to suit your needs</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima, necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum necessitatibus blanditiis esse tenetur?</p>
-      </div>
-    </div>
+  <h2 class="text-light text-center">Product Features</h2>
+  <div class=" container text-light ">
     <div class="row">
       <div class="col-5 d-flex align-items-center">
         <div>
-          <h5> Get notified when a project is modified</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima, necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum necessitatibus blanditiis esse tenetur?</p>
+          <h5>View projects made by students of different institutions</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima,
+            necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum
+            necessitatibus blanditiis esse tenetur?</p>
         </div>
       </div>
-      <div class="col-7">
-        <img src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211" style="width: 700px; margin: 50px 0;" >
+      <div class="col-7 ">
+        <img
+          src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211"
+          style="width: 700px; margin: 50px 0;">
       </div>
     </div>
     <div class="row">
       <div class="col-7">
-        <img src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211" style="width: 700px; margin: 50px 0;" >
+        <img
+          src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211"
+          style="width: 700px; margin: 50px 0;">
       </div>
       <div class="col-5 d-flex align-items-center">
         <div>
-          <h5>Collaborate with students from diverse institutions</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima, necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum necessitatibus blanditiis esse tenetur?</p>
+          <h5>Download the project and adjust it to suit your needs</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima,
+            necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum
+            necessitatibus blanditiis esse tenetur?</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5 d-flex align-items-center">
+          <div>
+            <h5> Get notified when a project is modified</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima,
+              necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum
+              necessitatibus blanditiis esse tenetur?</p>
+          </div>
+        </div>
+        <div class="col-7">
+          <img
+            src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211"
+            style="width: 700px; margin: 50px 0;">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-7">
+          <img
+            src="https://wac-cdn.atlassian.com/dam/jcr:82085599-4ecc-4965-a101-ed9cbb2505e1/bitbucket-cloud-features-002_2x.png?cdnVersion=1211"
+            style="width: 700px; margin: 50px 0;">
+        </div>
+        <div class="col-5 d-flex align-items-center">
+          <div>
+            <h5>Collaborate with students from diverse institutions</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ut? Quo tempore labore nemo minima,
+              necessitatibus nesciunt totam voluptatum esse error, mollitia distinctio magni! Voluptas illum
+              necessitatibus blanditiis esse tenetur?</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 
@@ -114,11 +131,16 @@
 <!--slider -->
 <div id="carouselExampleIndicators" class="carousel slide" style="padding: 100px 0; ">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+      aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+      aria-label="Slide 5"></button>
   </div>
   <div class="carousel-inner ">
     <div class="carousel-item active ">
@@ -132,7 +154,7 @@
           </button>
         </div>
       </div>
-    </div>  
+    </div>
     <div class="carousel-item">
       <div class="card color5 text-light " style="width: 50%; margin: auto;">
         <h5 class="card-header fs-2">Project title</h5>
@@ -144,7 +166,7 @@
           </button>
         </div>
       </div>
-    </div>  
+    </div>
     <div class="carousel-item  ">
       <div class="card color5 text-light " style="width: 50%; margin: auto;">
         <h5 class="card-header fs-2">Project title</h5>
@@ -156,7 +178,7 @@
           </button>
         </div>
       </div>
-    </div>  
+    </div>
     <div class="carousel-item  ">
       <div class="card color5 text-light " style="width: 50%; margin: auto;">
         <h5 class="card-header fs-2">Project title</h5>
@@ -168,7 +190,7 @@
           </button>
         </div>
       </div>
-    </div>  
+    </div>
     <div class="carousel-item  ">
       <div class="card color5 text-light " style="width: 50%; margin: auto;">
         <h5 class="card-header fs-2">Project title</h5>
@@ -180,8 +202,8 @@
           </button>
         </div>
       </div>
-    </div>  
-   
+    </div>
+
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

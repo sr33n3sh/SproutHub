@@ -52,6 +52,9 @@
 
 {% else %}
 {% if name == 'student_register' %}
+<script>
+    console.log("Student");
+</script>
 <section class="text-center">
     <!-- Background image -->
     <div class="p-5 bg-image" style="
@@ -66,11 +69,10 @@
           backdrop-filter: blur(30px);
           ">
         <div class="card-body py-5 px-md-5">
-
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <h2 class="fw-bold mb-5">student</h2>
-                    <form method="POSt">
+                    <form method="post">
                         {% csrf_token %}
                         <div class="form-outline mb-4">
                             <!-- <input type="email" id="form3Example3" class="form-control" /> -->
