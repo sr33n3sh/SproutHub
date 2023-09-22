@@ -25,13 +25,24 @@
         <li class="nav-item">
           <a class="nav-link" href="http://127.0.0.1:8000/search/">Search </a>
         </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ user.username }}
+          </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/logout">logout</a>
+          </li>
+          {% else %}
         <li class="nav-item">
           <a class="nav-link" href="http://127.0.0.1:8000/login/">Sign In</a>
         </li>
       </ul>
 
       <button class="btn btn-outline-light my-2 my-sm-0 mx-3" type="submit">
-        <a class="nav-link" href="http://127.0.0.1:8000/register/">Sign Up</a>
+        <a class="nav-link" href="http://127.0.0.1:8000/college_register/">Sign Up</a>
+        {% endif %}
     </form>
   </div>
 </nav>
