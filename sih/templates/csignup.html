@@ -5,9 +5,9 @@
 {% block content %}
   <div class="row justify-content-center">
     <div class="col-lg-8 col-md-10 col-sm-12">
-      <div class="card">
-        <div class="card-body" style="margin-top: 41px;">
-          <h3 class="card-title">Institute Sign up</h3>
+      <h3 class="text-white mb-2 text-center">Institute Sign Up</h3>
+      <div class="card mb-5">
+        <div class="card-body " style="margin-top: 41px;">
           <form method="post" novalidate>
             {% csrf_token %}
             {% include 'form.html' %}
