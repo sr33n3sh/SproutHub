@@ -7,39 +7,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Project Search</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body style="background-color: black;">
-    <nav class="navbar navbar-expand-lg navbar-dark color5">
-        <img src="download.jpg" alt=".." />
-        <a class="navbar-brand" href="#">SIH</a>
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarTogglerDemo02"
-        >
+<body style="background-image: linear-gradient(#0B2447, black); height: 100vh;">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="position:sticky; top:0; z-index:1; background-color: #19376D;">
+        <div class="logo-container d-flex flex-column justify-content-center align-items-center
+        ">
+          <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 2.5rem;
+          margin: 0 1rem;" alt="Logo" />
+          <p class="text-white" style="font-weight: lighter; margin: 0;">HUB</p>
+        </div>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home </a>
+              <a class="nav-link text-white" href="{% url 'home' %}">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link text-white" href="{% url 'about_page' %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link text-white" href="{% url 'contact_page' %}">Contact</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0 d-flex mb-2">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/search/">Search </a>
+                <a class="nav-link text-white" href="http://127.0.0.1:8000/search/">Search </a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  {{ user.username }}
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/login/">Sign In</a>
+                <a class="nav-link" href="http://127.0.0.1:8000/logout">logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link text-white" href="http://127.0.0.1:8000/login/">Sign In</a>
               </li>
             </ul>
-
-            <button class="btn btn-outline-light my-2 my-sm-0 mx-3" type="submit">
-              <a class="nav-link" href="http://127.0.0.1:8000/college_register/">signup</a>
+      
+            <button class="btn btn-success my-2 my-sm-0 mx-3" type="submit">
+              <a class="nav-link text-white" href="http://127.0.0.1:8000/college_register/">Sign Up</a>
+      
+              {% endif %}
           </form>
         </div>
       </nav>
@@ -74,7 +90,7 @@
 
                 <div class="row " id="projectResults">
                     <div class="col-md-12">
-                        <div class="card md-4 text-light" style="background-color: #071952;">
+                        <div class="card md-4 text-light" style="background-color:  #19376d;;">
                             <div class="card-body">
                                 <h5 class="card-title">Project Title</h5>
                                 <p class="card-text">Project Description...</p>
@@ -93,7 +109,7 @@
                             </div>
                         </div>
                         <br>
-                        <div class="card md-4 text-light" style="background-color: #071952;">
+                        <div class="card md-4 text-light" style="background-color:  #19376d;;">
                             <div class="card-body">
                                 <h5 class="card-title">Project Title</h5>
                                 <p class="card-text">Project Description...</p>
@@ -116,7 +132,7 @@
             <div class="col-12 col-lg-3">
                 <h3>Recently viewed projects</h3>
                 <br>
-                <div class="card md-4 text-light" style="background-color: #071952;">
+                <div class="card md-4 text-light" style="background-color:  #19376d;;">
                     <div class="card-body">
                         <h5 class="card-title">Project Title</h5>
                         <p class="card-text">Project Description...</p>
@@ -131,10 +147,38 @@
         </div>
     </div>
     <!--  -->
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+        <footer class=" text-light justify-content-center d-flex align-items-center mt-5" , style="padding-bottom:25px; background-color: #19376d;">
+            <div class="container row ">
+              <div class="col-6 justify-content-center d-flex align-items-center flex-column">
+                <img src="https://sproutdental.ca/wp-content/uploads/2019/07/SproutDental-Homepage-2019-Hero-Logo.png" style="height: 4rem;
+            margin-top: 4rem;" alt="Logo" />
+            <p class="text-white" style="font-weight: lighter; margin: 0; font-size: 25px;">HUB</p>
+            <br>
+                <div style="padding-top: 20px;">
+                  <ion-icon name="logo-instagram" class="mx-1"></ion-icon>
+                  <ion-icon name="logo-facebook" class="mx-1"></ion-icon>
+                  <ion-icon name="logo-linkedin" class="mx-1"></ion-icon>
+                  <ion-icon name="logo-twitter" class="mx-1"></ion-icon>
+                </div>
+                <div style="margin-left: -8%;">
+                  <ul style="list-style-type: none; padding-top:24px;">
+                    <li><a >About Us</a></li>
+                    <li><a>Contact Us</a></li>
+                    <li><a>Review Us</a></li>
+                    <li><a>FAQs</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-6 d-flex flex-column align-items-center justify-content-center ">
+                <div style="font-size:xx-large;" class="container"><b>Sprout Hub</b></div>
+                <div class="container">Where Ideas Flourish, Boundaries Fade, and Knowledge Thrives. Join Our Global Community Today!</div>
+              </div>
+            </div>
+        
+          </footer>
 </body>
-
 </html>

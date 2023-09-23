@@ -91,6 +91,9 @@ def landingPage(request):
 def aboutPage(request):
     return render(request,"aboutPage.html",{"title":"aboutPage"})
 
+def contactUs(request):
+    return render(request,"contactus.html",{"title":"Contact Us"})
+
 from .models import Project 
 def project_form(request):
     if request.method == 'POST':

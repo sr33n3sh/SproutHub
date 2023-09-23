@@ -33,4 +33,5 @@ urlpatterns = [
     path('list/',views.project_form, name='project_form'),
     path('clghome/', views.project_list, name='project_list'),
     path('about/',views.aboutPage, name='about_page'),
+    path('contact/',views.contactUs, name='contact_page'),
 ]
