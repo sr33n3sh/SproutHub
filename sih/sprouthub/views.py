@@ -78,9 +78,8 @@ def loginpage(request):
 
 
 
-
-
-
+def upload(request):
+    return render(request,"checking.html")
 
 def register(request):
     return render(request,"register.html")
@@ -93,6 +92,7 @@ def aboutPage(request):
 
 from .models import Project 
 def project_form(request):
+    projects = Project.objects.all()
     if request.method == 'POST':
         print("Posted")
         project_name = request.POST['project_name']
@@ -110,9 +110,4 @@ def project_form(request):
             project_file=project_file
         )
         project.save()
-        return redirect('project_list')
-    return render(request, 'clg_home.html')
-
-def project_list(request):
-    projects = Project.objects.all()
-    return render(request, 'clg_home.html', {'projects': projects})
+    return render(request, 'clg_home.html',{'projects': projects})

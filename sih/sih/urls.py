@@ -30,7 +30,7 @@ urlpatterns = [
     path('register/',views.register),
     path('login/',auth_views.LoginView.as_view(template_name='login.html'),name='login'), 
     path('accounts/profile/',acc_views.redi),
-    path('list/',views.project_form, name='project_form'),
-    path('clghome/', views.project_list, name='project_list'),
+    path('clghome/',views.project_form, name='project_form'),
     path('about/',views.aboutPage, name='about_page'),
+    path('uploadlogo/',views.upload)
 ]
