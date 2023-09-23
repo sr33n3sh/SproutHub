@@ -11,7 +11,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body style="background-image: linear-gradient(#0B2447, black); height: 100vh;">
+<body style="background-image: linear-gradient(#0B2447, black); background-repeat: no-repeat;">
     <nav class="navbar navbar-expand-lg navbar-dark " style="position:sticky; top:0; z-index:1; background-color: #19376D;">
         <div class="logo-container d-flex flex-column justify-content-center align-items-center
         ">
@@ -90,25 +90,41 @@
 
                 <div class="row " id="projectResults">
                     <div class="col-md-12">
-                        <div class="card md-4 text-light" style="background-color:  #19376d;;">
-                            <div class="card-body">
-                                <h5 class="card-title">Project Title</h5>
-                                <p class="card-text">Project Description...</p>
-                                <p class="card-text text-light">Institution: Institution Name</small></p>
-                                <div class="row">
-                                    <div class="col-12 col-sm-3 col-md-2">
-                                        <button class="btn btn-outline-light my-2 my-sm-0 mx-3"
-                                            type="submit">view</button>
-                                    </div>
-                                    <br>
-                                    <div class="col-12 col-sm-3 col-md-2">
-                                        <button class="btn btn-outline-light my-2 my-sm-0 mx-3"
-                                            type="submit">download</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
+                      {% for project in projects %}
+                      <div class="uproj card mb-3" style="border: none;">
+                          <div class="card-body" style="background-color: #19376d;">
+                              <h5 class="card-title fs-3">{{ project.project_name }}</h5>
+                              <p class="card-text">{{ project.project_description}}</p>
+                              <div class="authordetails d-flex">
+                                  <p class="authorhead fw-bold">Project Author :</p>
+                                  <p class="authorname mx-1">{{ project.student_name }}</p>
+                                  <p class="authorhead fw-bold">Created At :</p>
+                                  <p class="authorname mx-1">{{ project.created_at }}</p>
+                                  <a href="{{ project.project_file.url }}" target="_blank">{{ project.project_file.name }}</a>
+                                  <a class="authorlink link mx-1" style="text-decoration: underline;">Details</a>
+                              </div>
+                              <div class="projrating d-flex align-items-center">
+                                  <b>Rating:</b>
+                                  <div class="rating mx-2">
+                                      <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                                      <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                                      <i class="fa-solid fa-star" style="color: #ffdd00;"></i>
+                                      <i class="fa-regular fa-star"></i>
+                                      <i class="fa-regular fa-star"></i>
+                                  </div>
+                              </div>
+                          </div>
+                          
+          
+                      </div>
+                      {% empty %}
+                      <div class="uproj card mb-3">
+                          <div class="card-body">
+                              <h5 class="card-title fs-3">No projects Available</h5>
+                          </div>
+                      </div>
+                      {% endfor %}
+                        <!-- <br>
                         <div class="card md-4 text-light" style="background-color:  #19376d;;">
                             <div class="card-body">
                                 <h5 class="card-title">Project Title</h5>
@@ -125,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

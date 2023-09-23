@@ -13,7 +13,8 @@ def home(request):
     return render(request,'home.html')
 
 def search(request):
-    return render(request,'search.html')
+    projects=Project.objects.all()
+    return render(request,'search.html',{'projects': projects})
 
 def student_register(request):
     name='student_register'
@@ -114,3 +115,6 @@ def project_form(request):
         )
         project.save()
     return render(request, 'clg_home.html',{'projects': projects})
+
+
+
