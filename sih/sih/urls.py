@@ -32,6 +32,6 @@ urlpatterns = [
     path('accounts/profile/',acc_views.redi),
     path('clghome/',views.project_form, name='project_form'),
     path('about/',views.aboutPage, name='about_page'),
-    path('uploadlogo/',views.upload)
+    path('uploadlogo/',views.upload),
     path('contact/',views.contactUs, name='contact_page'),
 ]
